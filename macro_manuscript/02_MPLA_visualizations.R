@@ -533,3 +533,5 @@ fig6 <- (a6 | b6) / (c6 | d6) +
 fig5
 fig6
 
+#last write April 22, 2026
+

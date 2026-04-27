@@ -158,7 +158,7 @@ check_assumptions_dharma <- function(model, model_name) {
   print(testDispersion(sim_res))
   print(testZeroInflation(sim_res))
 }
-
+dev.new(width = 10, height = 8)
 check_assumptions_dharma(macro_ind_carmel,    "Macro individuals - Carmel")
 check_assumptions_dharma(macro_ind_monterey,  "Macro individuals - Monterey")
 check_assumptions_dharma(macro_stipes_carmel,   "Macro stipes - Carmel")

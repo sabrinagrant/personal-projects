@@ -1,4 +1,4 @@
-#Statistical analysis of kelp density data
+#Statistical analysis of MPLA kelp density data
 #Sabrina N. Grant
 #April 22, 2026
 

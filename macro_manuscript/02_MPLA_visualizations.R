@@ -1,18 +1,17 @@
-#visualizations from MPA data
+#visualizations from MPLA data
 #Sabrina N. Grant
-#April 10, 2026
+#April 22, 2026
 
 rm(list=ls())
 librarian::shelf(tidyverse, here, ggplot2, patchwork, mgcv)
 
 ##require:
 #kelp_swath_counts_CC.csv
-#kelp_upc_cov_CC.csv
 
 ################################################################################
 #set directories and load data
 basedir2 <- here::here("data_files","monitoring_data","processed")           
-output2 <- here::here("Macro_Manuscript")
+output1 <- "/Users/sabrinagrant/Desktop/code_repositories/macro_manuscript/macro_manuscript/figures/MPLA"
 
 kelp_swath_processed <- read.csv(file.path(basedir2, "kelp_swath_counts_CC.csv")) %>%
   janitor::clean_names()
@@ -533,5 +532,47 @@ fig6 <- (a6 | b6) / (c6 | d6) +
 fig5
 fig6
 
+################################################################################
+#SAVING ALL FIGURES I WANT 
+
+ggsave(file.path(output1, "Fig_density_#plants_GAM.png"),
+       plot = a3, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_density_#stipes_GAM.png"),
+       plot = b3, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Carmel_#plants_GAM.png"),
+       plot = a4, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Monterey_#plants_GAM.png"),
+       plot = b4, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Carmel_#stipes_GAM.png"),
+       plot = c4, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Monterey_#stipes_GAM.png"),
+       plot = d4, width = 18, height = 10, dpi = 300, bg = "white")
+
+
+ggsave(file.path(output1, "Fig_prop_abundance_#plants_GAM.png"),
+       plot = a5, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_prop_abundance_#stipes_GAM.png"),
+       plot = b5, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Carmel_prop_abundance_#plants_GAM.png"),
+       plot = a6, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Carmel_prop_abundance_#stipes_GAM.png"),
+       plot = c6, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Monterey_prop_abundance_#plants_GAM.png"),
+       plot = b6, width = 18, height = 10, dpi = 300, bg = "white")
+
+ggsave(file.path(output1, "Fig_Monterey_prop_abundance_#stipes_GAM.png"),
+       plot = d6, width = 18, height = 10, dpi = 300, bg = "white")
+
+
+################################################################################
 #last write April 22, 2026
 
